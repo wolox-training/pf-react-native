@@ -25,7 +25,7 @@ import styles from './styles';
 const App: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar  />
       <SafeAreaView>
         <View style={styles.container}>
           <BookList />

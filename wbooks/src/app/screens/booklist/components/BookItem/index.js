@@ -4,18 +4,20 @@ import styles from './styles';
 
 class BookItem extends Component {
 
-	render() {
-		return (
+  render() {
+    const { urlPath, title, writer } = this.props;
+    
+    return (
       <View style={styles.container}>
         <Image style={styles.image}
-        source={{uri: 'http://wolox-training.s3.amazonaws.com/uploads/6942334-M.jpg'}} />
+        source={{uri: urlPath}} />
         <View style={styles.textContainer}>
-          <Text style={styles.bookTitle}>A Little Bird Told Me</Text>    
-          <Text style={styles.bookDescription}>Timothy Cross</Text>    
+          <Text style={styles.bookTitle}>{title}</Text>    
+          <Text style={styles.bookDescription}>{writer}</Text>    
         </View>
       </View>
-		);
-	}
+    );
+  }
 }
 
 export default BookItem;

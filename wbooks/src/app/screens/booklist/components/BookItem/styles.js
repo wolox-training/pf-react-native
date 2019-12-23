@@ -2,18 +2,17 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
 	container: {
-        width: '100%',
         alignItems: 'flex-start',
         flexDirection: 'row',
         backgroundColor: 'white',
         borderRadius: 5,
         padding: 15,
-        margin: 10,
+        margin: 5
     },
     image: {
         width: 40,
         height: 60,
-        marginLeft: 15,
+        marginLeft: 15
     },
     textContainer: {
         flex: 1,
