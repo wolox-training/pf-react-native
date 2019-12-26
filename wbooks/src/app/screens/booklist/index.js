@@ -10,6 +10,15 @@ import styles from './styles';
 import books from './books';
 
 class BookList extends Component {
+
+	renderItem = ({ item }) => (
+		<BookItem 
+			title= {item.title}
+			writer= {item.author}
+			uri= {item.image_url}
+		/>
+	);
+	keyExtractor = item => `${item.id}`;
 	 
 	render() {
 
@@ -17,14 +26,8 @@ class BookList extends Component {
 			<SafeAreaView style={styles.container}>
 				<FlatList
 					data={books}
-					renderItem={({ item }) => 
-						<BookItem 
-							title= {item.title}
-							writer= {item.author}
-							urlPath= {item.image_url}
-						/>
-					}
-					keyExtractor={item => `${item.id}`}
+					renderItem={this.renderItem}
+					keyExtractor={this.keyExtractor}
 				/>
 			</SafeAreaView>
 		);
