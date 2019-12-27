@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { cyan } from '../../../constants/colors';
 
 import { cyan } from '../../../constants/colors';
 
