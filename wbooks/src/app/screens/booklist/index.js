@@ -19,7 +19,7 @@ class BookList extends Component {
 		})}>
 			<BookItem 
 				title= {item.title}
-				writer= {item.author}
+				author= {item.author}
 				uri= {item.image_url}
 			/>
 		</TouchableOpacity>

@@ -25,7 +25,7 @@ class BookItem extends Component {
 BookItem.propTypes = {
   uri: PropTypes.string,
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired
 };
 
 export default BookItem;

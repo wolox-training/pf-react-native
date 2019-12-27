@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import {  
   View, 
   Image,
-  Text 
+  Text,
+  TouchableOpacity
 } from 'react-native';
-import styles from './styles';
 import PropTypes from 'prop-types';
+
+import styles from './styles';
 
 class BookDetail extends Component {
 	 
@@ -21,11 +23,18 @@ class BookDetail extends Component {
             source={{uri: book.image_url}} />
             <View style={styles.textContainer}>
               <Text style={styles.bookTitle}>{book.title}</Text>    
-              <Text style={styles.bookWriter}>{book.author}</Text>    
+              <Text style={styles.bookAvailability}>Not available</Text>    
+              <Text style={styles.bookAuthor}>{book.author}</Text>    
               <Text style={styles.bookYear}>{book.year}</Text>    
               <Text style={styles.bookGenre}>{book.genre}</Text>    
             </View>
           </View>
+          <TouchableOpacity style={styles.whishListButton}>
+            <Text style={styles.whishListButtonText}>ADD TO WISHLIST</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.RentButton}>
+            <Text style={styles.RentButtonText}>RENT</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );

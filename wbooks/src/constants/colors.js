@@ -1,2 +1,5 @@
 export const cyan = '#EAF6FA'
 export const lightGray = '#4A4A4A'
+export const red = '#D0021B'
+export const white = '#FFFFFF'
+export const lightBlue = '#00ADEE'
