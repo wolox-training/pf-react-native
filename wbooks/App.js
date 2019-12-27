@@ -15,10 +15,6 @@ import {
   StatusBar,
 } from 'react-native';
 
-import {
-  Header,
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
 import BookList from './src/app/screens/booklist';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
