@@ -15,11 +15,8 @@ import {
   StatusBar,
 } from 'react-native';
 
-import {
-  Header,
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
 import BookList from './src/app/screens/booklist';
+
 import styles from './styles';
 
 const App: () => React$Node = () => {

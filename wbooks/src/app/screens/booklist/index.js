@@ -5,9 +5,11 @@ import {
 	StyleSheet, 
 	FlatList 
 } from 'react-native';
+
 import BookItem from './components/BookItem';
-import styles from './styles';
 import BOOKS from './books';
+
+import styles from './styles';
 
 class BookList extends Component {
 
