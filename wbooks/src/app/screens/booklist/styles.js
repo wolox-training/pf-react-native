@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native';
+import { cyan } from '../../../constants/colors';
 
 export default StyleSheet.create({
     container: {
-      flex: 1,
-      alignItems: 'center',
-      padding:20
-  }
+        flex: 1,
+        padding:15,
+        backgroundColor: cyan
+    }
 });

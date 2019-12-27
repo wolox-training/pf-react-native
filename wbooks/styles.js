@@ -1,8 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-    container: {
-    height: '100%', 
-    backgroundColor: 'cyan'
+	container: {
+    height: '100%'
   }
 });

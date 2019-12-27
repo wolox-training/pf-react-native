@@ -15,17 +15,13 @@ import {
   StatusBar,
 } from 'react-native';
 
-import {
-  Header,
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
 import BookList from './src/app/screens/booklist';
 import styles from './styles';
 
 const App: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar  />
       <SafeAreaView>
         <View style={styles.container}>
           <BookList />
