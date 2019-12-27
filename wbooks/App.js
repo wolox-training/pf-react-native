@@ -20,18 +20,19 @@ import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
 import BookList from './src/app/screens/booklist';
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
+import BookDetail from './src/app/screens/book-detail';
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar  />
-      <SafeAreaView>
-        <View style={{ height:'100%' }}>
-          <BookList />
-        </View>
-      </SafeAreaView>
-    </>
-  );
-};
+const MainNavigator = createStackNavigator({
+  Home: {screen: BookList},
+  Details: {screen: BookDetail},
+},
+{
+  initialRouteName: 'Home',
+});
+
+const App = createAppContainer(MainNavigator);
 
 export default App;
+
