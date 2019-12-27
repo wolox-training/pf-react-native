@@ -16,7 +16,6 @@ import {
 } from 'react-native';
 
 import BookList from './src/app/screens/booklist';
-
 import styles from './styles';
 
 const App: () => React$Node = () => {

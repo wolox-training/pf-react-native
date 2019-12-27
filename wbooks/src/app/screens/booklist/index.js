@@ -7,9 +7,8 @@ import {
 } from 'react-native';
 
 import BookItem from './components/BookItem';
-import BOOKS from './books';
-
 import styles from './styles';
+import BOOKS from './books';
 
 class BookList extends Component {
 
