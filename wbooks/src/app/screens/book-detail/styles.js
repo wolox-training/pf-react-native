@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { cyan, lightGray, red, white, lightBlue } from '../../../constants/colors';
+
+import { cyan, lightGray, red, white, lightBlue, lightGreen } from '../../../constants/colors';
 
 export default StyleSheet.create({
   container: {
@@ -13,8 +14,6 @@ export default StyleSheet.create({
   },
   cardContainer: {
     flexDirection: 'row',
-    borderColor: lightGray,
-    borderWidth: 1,
     borderRadius: 5,
     marginStart: 30,
     marginTop: 8,
@@ -48,7 +47,7 @@ export default StyleSheet.create({
   },
   bookAvailability: {
     fontSize: 15,
-    color: red,
+    color: lightGreen,
     fontWeight: 'bold',
     letterSpacing: -0.36,
     lineHeight: 18
