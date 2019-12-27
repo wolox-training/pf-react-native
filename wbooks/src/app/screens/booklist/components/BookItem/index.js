@@ -14,7 +14,7 @@ class BookItem extends Component {
         source={{uri}} />
         <View style={styles.textContainer}>
           <Text style={styles.bookTitle}>{title}</Text>    
-          <Text style={styles.bookDescription}>{writer}</Text>    
+          <Text style={styles.bookWriter}>{writer}</Text>    
         </View>
       </View>
     );
