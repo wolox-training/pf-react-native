@@ -24,7 +24,7 @@ export default StyleSheet.create({
         fontSize: 17, 
         fontWeight: 'bold'
     },
-    bookDescription: {
+    bookAuthor: {
         fontSize: 15
     }
     

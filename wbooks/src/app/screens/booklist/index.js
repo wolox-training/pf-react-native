@@ -7,14 +7,14 @@ import {
 } from 'react-native';
 import BookItem from './components/BookItem';
 import styles from './styles';
-import books from './books';
+import BOOKS from './books';
 
 class BookList extends Component {
 
 	renderItem = ({ item }) => (
 		<BookItem 
 			title= {item.title}
-			writer= {item.author}
+			author= {item.author}
 			uri= {item.image_url}
 		/>
 	);
@@ -25,7 +25,7 @@ class BookList extends Component {
 		return (
 			<SafeAreaView style={styles.container}>
 				<FlatList
-					data={books}
+					data={BOOKS}
 					renderItem={this.renderItem}
 					keyExtractor={this.keyExtractor}
 				/>
