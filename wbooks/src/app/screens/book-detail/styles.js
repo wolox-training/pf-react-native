@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { cyan } from '../../../constants/colors';
+import { cyan, lightGray } from '../../../constants/colors';
 
 export default StyleSheet.create({
   container: {
@@ -13,10 +13,7 @@ export default StyleSheet.create({
     margin: 20
   },
   cardContainer: {	
-    alignItems: 'flex-start',
     flexDirection: 'row',
-    backgroundColor: 'red',
-    height: 112,
     borderRadius: 5,
     marginStart: 30,
     marginTop: 8,
@@ -36,16 +33,31 @@ export default StyleSheet.create({
   },
   bookTitle: { 
       fontSize: 24, 
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      color: lightGray,
+      letterSpacing: -0.58,
+      lineHeight: 29
   },
   bookYear: {
-      fontSize: 15
+      fontSize: 15,
+      color: lightGray,
+      fontWeight: '300',
+      letterSpacing: -0.24,
+      lineHeight: 18
   },
   bookWriter: {
-      fontSize: 15
+      fontSize: 15,
+      color: lightGray,
+      fontWeight: '300',
+      letterSpacing: -0.24,
+      lineHeight: 18
   },
   bookGenre: {
-      fontSize: 15
+      fontSize: 15,
+      color: lightGray,
+      fontWeight: '300',
+      letterSpacing: -0.24,
+      lineHeight: 18
   }
 
 });
