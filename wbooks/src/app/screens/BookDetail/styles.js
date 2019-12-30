@@ -15,9 +15,8 @@ export default StyleSheet.create({
   cardContainer: {
     flexDirection: 'row',
     borderRadius: 5,
-    marginStart: 30,
-    marginTop: 8,
-    marginEnd: 30
+    marginHorizontal: 30,
+    marginTop: 8
   },
   image: {
     width: 69,
@@ -28,8 +27,7 @@ export default StyleSheet.create({
   textContainer: {
     flex: 1,
     marginHorizontal: 20,
-    borderTopWidth: 0,
-    flexGrow: 1
+    borderTopWidth: 0
   },
   bookTitle: { 
     fontSize: 24, 
@@ -38,7 +36,7 @@ export default StyleSheet.create({
     letterSpacing: -0.58,
     lineHeight: 29
   },
-  bookYear: {
+  bookText: {
     fontSize: 15,
     color: lightGray,
     fontWeight: '300',
@@ -52,26 +50,11 @@ export default StyleSheet.create({
     letterSpacing: -0.36,
     lineHeight: 18
   },
-  bookAuthor: {
-    fontSize: 15,
-    color: lightGray,
-    fontWeight: '300',
-    letterSpacing: -0.24,
-    lineHeight: 18
-  },
-  bookGenre: {
-    fontSize: 15,
-    color: lightGray,
-    fontWeight: '300',
-    letterSpacing: -0.24,
-    lineHeight: 18
-  },
   whishListButton: {
     borderColor: lightBlue,
     borderRadius: 100,
     borderWidth: 1,
-    marginStart: 30,
-    marginEnd: 30,
+    marginHorizontal: 30,
     marginTop: 30
   },
   whishListButtonText: {
@@ -86,8 +69,7 @@ export default StyleSheet.create({
     borderColor: lightBlue,
     borderRadius: 100,
     borderWidth: 1,
-    marginStart: 30,
-    marginEnd: 30,
+    marginHorizontal: 30,
     marginTop: 10,
     marginBottom: 22,
   },

@@ -14,7 +14,8 @@ import BOOKS from './books';
 class BookList extends Component {
 
 	renderItem = ({ item }) => (
-		<TouchableOpacity onPress={() => this.props.navigation.navigate('Details', {
+		<TouchableOpacity onPress={
+			() => this.props.navigation.navigate('Details', {
 			book: item
 		})}>
 			<BookItem 
