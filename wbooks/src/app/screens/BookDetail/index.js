@@ -28,10 +28,10 @@ class BookDetail extends Component {
           </View>
           <View>
             <TouchableOpacity onPress={() => {}} style={styles.whishListButton}>
-              <Text style={styles.whishListButtonText}>ADD TO WISHLIST</Text>
+              <Text style={styles.ButtonText}>ADD TO WISHLIST</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => {}} style={styles.RentButton}>
-              <Text style={styles.RentButtonText}>RENT</Text>
+              <Text style={styles.ButtonText}>RENT</Text>
             </TouchableOpacity>
           </View>
         </View>

@@ -57,7 +57,7 @@ export default StyleSheet.create({
     marginHorizontal: 30,
     marginTop: 30
   },
-  whishListButtonText: {
+  ButtonText: {
     alignSelf: 'center',
     margin: 13,
     fontSize: 15,
@@ -72,14 +72,6 @@ export default StyleSheet.create({
     marginHorizontal: 30,
     marginTop: 10,
     marginBottom: 22,
-  },
-  RentButtonText: {
-    alignSelf: 'center',
-    margin: 13,
-    fontSize: 15,
-    color: lightBlue,
-    fontWeight: '900',
-    letterSpacing: -0.19
   }
 
 });
