@@ -14,21 +14,20 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
-import BookList from './src/app/screens/booklist';
-import styles from './styles';
+import BookList from './src/app/screens/BookList';
+import BookDetail from './src/app/screens/BookDetail';
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar  />
-      <SafeAreaView>
-        <View style={styles.container}>
-          <BookList />
-        </View>
-      </SafeAreaView>
-    </>
-  );
-};
+const MainNavigator = createStackNavigator({
+  Home: { screen: BookList },
+  Details: { screen: BookDetail },
+},
+{
+  initialRouteName: 'Home',
+});
+
+const App = createAppContainer(MainNavigator);
 
 export default App;

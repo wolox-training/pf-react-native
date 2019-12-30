@@ -3,7 +3,8 @@ import {
 	SafeAreaView, 
 	View, 
 	StyleSheet, 
-	FlatList 
+	FlatList,
+	TouchableOpacity
 } from 'react-native';
 
 import BookItem from './components/BookItem';
@@ -13,11 +14,16 @@ import BOOKS from './books';
 class BookList extends Component {
 
 	renderItem = ({ item }) => (
-		<BookItem 
-			title= {item.title}
-			author= {item.author}
-			uri= {item.image_url}
-		/>
+		<TouchableOpacity onPress={
+			() => this.props.navigation.navigate('Details', {
+			book: item
+		})}>
+			<BookItem 
+				title= {item.title}
+				author= {item.author}
+				uri= {item.image_url}
+			/>
+		</TouchableOpacity>
 	);
 	keyExtractor = item => `${item.id}`;
 	 
