@@ -26,8 +26,7 @@ export default StyleSheet.create({
   },
   textContainer: {
     flex: 1,
-    marginHorizontal: 20,
-    borderTopWidth: 0
+    marginHorizontal: 20
   },
   bookTitle: { 
     fontSize: 24, 
