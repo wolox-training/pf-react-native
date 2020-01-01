@@ -8,6 +8,7 @@ import {
 import PropTypes from 'prop-types';
 
 import styles from './styles';
+import CommentTable from './components/CommentTable';
 
 class BookDetail extends Component {
 	render() {
@@ -35,7 +36,9 @@ class BookDetail extends Component {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={styles.cardDetail} />
+        <View style={styles.cardDetail}>
+          <CommentTable/>
+        </View>
       </View>
     );
   }
