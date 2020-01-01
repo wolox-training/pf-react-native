@@ -13,20 +13,12 @@ class CommentItem extends Component {
         <Image style={styles.userImage}
         source={{uri:"http://wolox-training.s3.amazonaws.com/uploads/el-psicoanalista-analyst-john-katzenbach-paperback-cover-art.jpg"}}/>
         <View style={styles.textContainer}>
-          <Text style={styles.userName}>this.props.comment.title</Text>    
-          <Text style={styles.comment}>this.props.comment.author por qwrqw sadgasg asgasg asgasg asfasf
-          asfasf asfaasf asgfasga gsdfgdth ryfjtfyktrytje srvesrber egsrege
-          egrsgersge srgerhrhjr6h rth</Text>    
+          <Text style={styles.userName}>John Appleseed</Text>    
+          <Text style={styles.comment}>It was great to see you again earlier. Let’s definitely get that coffe It was great to see you again earlier.</Text>    
         </View>
       </View>
     );
   }
 }
-
-// BookItem.propTypes = {
-//   uri: PropTypes.string,
-//   title: PropTypes.string.isRequired,
-//   author: PropTypes.string.isRequired
-// };
 
 export default CommentItem;

@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import {  
-  View, 
   Text,
-  ScrollView,
-  SafeAreaView
+  View,
+  ScrollView
 } from 'react-native';
-import PropTypes from 'prop-types';
 
-import styles from './styles';
 import CommentItem from './component/CommentItem';
+import styles from './styles';
 
 class CommentTable extends Component {
 
-	 
 	render() {
 
 		return (
-      <SafeAreaView style={styles.commentTable}>
+      <View style={styles.commentTable}>
         <ScrollView>
           <CommentItem/>
           <CommentItem/>
           <CommentItem/>
+          <CommentItem/>
+          <CommentItem/>
         </ScrollView>
-      </SafeAreaView>
+          <Text style={styles.linkText}>View All</Text>
+      </View>
     );
   }
 }

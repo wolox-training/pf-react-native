@@ -29,7 +29,8 @@ export default StyleSheet.create({
         fontSize: 15,
         fontWeight: '300',
         letterSpacing: -0.24,
-        lineHeight: 18
+        lineHeight: 18,
+        marginTop: 5
     }
     
 });
