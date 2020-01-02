@@ -2,26 +2,37 @@ import React, { Component } from 'react';
 import {  
   Text,
   View,
-  ScrollView
+  TouchableOpacity
 } from 'react-native';
 
 import CommentItem from './component/CommentItem';
 import styles from './styles';
+import COMMENTS from '../../comments';
 
 class CommentTable extends Component {
 
 	render() {
 
+    renderItem = ({ item }) => (
+      <TouchableOpacity onPress={
+        () => {} }>
+        <CommentItem 
+          userName= {item.userName}
+          comment= {item.comment}
+          uri= {item.image_url}
+        />
+      </TouchableOpacity>
+    );
+    keyExtractor = item => `${item.id}`;
+
 		return (
       <View style={styles.commentTable}>
-        <ScrollView>
-          <CommentItem/>
-          <CommentItem/>
-          <CommentItem/>
-          <CommentItem/>
-          <CommentItem/>
-        </ScrollView>
-          <Text style={styles.linkText}>View All</Text>
+        <FlatList
+          data={COMMENTS}
+          renderItem={this.renderItem}
+          keyExtractor={this.keyExtractor}
+        />
+        <Text style={styles.linkText}>View All</Text>
       </View>
     );
   }

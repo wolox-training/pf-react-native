@@ -36,9 +36,7 @@ class BookDetail extends Component {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={styles.cardDetail}>
           <CommentTable/>
-        </View>
       </View>
     );
   }

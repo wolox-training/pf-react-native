@@ -6,7 +6,9 @@ export default StyleSheet.create({
   commentTable: {	
     flex: 1,
     borderRadius: 5,
-    backgroundColor: white
+    backgroundColor: white,
+    marginHorizontal: 10,
+    marginTop: 10
   },
   linkContainer: {
     alignItems: 'center'
