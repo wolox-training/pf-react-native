@@ -19,6 +19,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import BookList from './src/app/screens/BookList';
 import BookDetail from './src/app/screens/BookDetail';
+import CustomHeader from './src/app/components/Header';
 
 const MainNavigator = createStackNavigator({
   Home: { screen: BookList },
@@ -26,6 +27,11 @@ const MainNavigator = createStackNavigator({
 },
 {
   initialRouteName: 'Home',
+
+  defaultNavigationOptions: {
+    header: 
+      <CustomHeader/>
+  },
 });
 
 const App = createAppContainer(MainNavigator);
