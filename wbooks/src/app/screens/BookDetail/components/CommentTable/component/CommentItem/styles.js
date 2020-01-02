@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native';
 import { darkGray, cyan } from '../../../../../../../constants/colors';
 
+const userSize = 45;
+
 export default StyleSheet.create({
 	container: {
         alignItems: 'flex-start',
@@ -10,8 +12,8 @@ export default StyleSheet.create({
         padding: 15
     },
     userImage: {
-        width: 45,
-        height: 45,
+        width: userSize,
+        height: userSize,
         borderRadius: 100
     },
     textContainer: {

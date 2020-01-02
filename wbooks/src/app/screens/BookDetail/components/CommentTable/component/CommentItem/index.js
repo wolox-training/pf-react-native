@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import styles from './styles';
 
-const CommentItem = ( userName, comment, uri ) => (
+const CommentItem = ({ userName, comment, uri }) => (
   <View style={styles.container}>
     <Image style={styles.userImage}
     source={{uri:"http://wolox-training.s3.amazonaws.com/uploads/el-psicoanalista-analyst-john-katzenbach-paperback-cover-art.jpg"}}/>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {  
   Text,
   View,
+  FlatList,
   TouchableOpacity
 } from 'react-native';
 
@@ -11,19 +12,20 @@ import COMMENTS from '../../comments';
 
 class CommentTable extends Component {
 
-	render() {
+  renderItem = ({ item }) => (
+    <TouchableOpacity 
+      onPress={() => {}}
+    >
+      <CommentItem 
+        userName={item.userName}
+        comment={item.comment}
+        uri={item.imageUrl}
+      />
+    </TouchableOpacity>
+  );
+  keyExtractor = item => `${item.id}`;
 
-    renderItem = ({ item }) => (
-      <TouchableOpacity onPress={
-        () => {} }>
-        <CommentItem 
-          userName= {item.userName}
-          comment= {item.comment}
-          uri= {item.image_url}
-        />
-      </TouchableOpacity>
-    );
-    keyExtractor = item => `${item.id}`;
+	render() {
 
 		return (
       <View style={styles.commentTable}>
