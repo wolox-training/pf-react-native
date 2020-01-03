@@ -7,10 +7,10 @@ import styles from './styles';
 const CommentItem = ({ userName, comment, uri }) => (
   <View style={styles.container}>
     <Image style={styles.userImage}
-    source={{uri:"http://wolox-training.s3.amazonaws.com/uploads/el-psicoanalista-analyst-john-katzenbach-paperback-cover-art.jpg"}}/>
+      source={{uri}}/>
     <View style={styles.textContainer}>
-      <Text style={styles.userName}>John Appleseed</Text>    
-      <Text style={styles.comment}>It was great to see you again earlier. Let’s definitely get that coffe It was great to see you again earlier.</Text>    
+      <Text style={styles.userName}>{userName}</Text>    
+      <Text style={styles.comment}>{comment}</Text>    
     </View>
   </View>
 );

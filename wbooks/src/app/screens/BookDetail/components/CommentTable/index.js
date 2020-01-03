@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import {  
   Text,
   View,
-  FlatList,
-  TouchableOpacity
+  FlatList
 } from 'react-native';
 
 import CommentItem from './component/CommentItem';
@@ -13,15 +12,11 @@ import COMMENTS from '../../comments';
 class CommentTable extends Component {
 
   renderItem = ({ item }) => (
-    <TouchableOpacity 
-      onPress={() => {}}
-    >
-      <CommentItem 
-        userName={item.userName}
-        comment={item.comment}
-        uri={item.imageUrl}
-      />
-    </TouchableOpacity>
+    <CommentItem 
+      userName={item.userName}
+      comment={item.comment}
+      uri={item.imageUrl}
+    />
   );
   keyExtractor = item => `${item.id}`;
 
@@ -34,7 +29,7 @@ class CommentTable extends Component {
           renderItem={this.renderItem}
           keyExtractor={this.keyExtractor}
         />
-        <Text style={styles.linkText}>View All</Text>
+        {COMMENTS.length > 5 && (<Text style={styles.linkText}>View All</Text>)}
       </View>
     );
   }
