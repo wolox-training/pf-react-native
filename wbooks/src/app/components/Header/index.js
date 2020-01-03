@@ -1,15 +1,37 @@
 import React, { Component } from 'react';
 import { 
   View,
-  Text
+  Text,
+	Image,
+	TouchableOpacity
 } from 'react-native';
 
+import backgroundImage from '../../../assets/bc_nav_bar.png';
+import backImage from '../../../assets/ic_back.png';
+import searchImage from '../../../assets/ic_search.png';
+import styles from './styles';
 
 class CustomHeader extends Component {
 	render() {
 		return (
-			<View>
-				<Text>HEADER</Text>
+			<View style={styles.container}>
+				<Image style={styles.image}
+					source={backgroundImage}
+					resizeMode="stretch"
+				/>
+				<View style={styles.actionContainer}>
+					<TouchableOpacity>
+						<Image style={styles.imageButton}
+							source={backImage}
+						/>
+					</TouchableOpacity>
+					<Text style={styles.text}>BOOK DETAIL</Text>
+					<TouchableOpacity>
+						<Image style={styles.imageButton}
+							source={searchImage}
+						/>
+					</TouchableOpacity>
+				</View>
 			</View>
 		);
 	}
