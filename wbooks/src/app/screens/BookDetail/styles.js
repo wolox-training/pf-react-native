@@ -5,12 +5,15 @@ import { cyan, lightGray, red, white, lightBlue, lightGreen } from '../../../con
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: cyan
+    backgroundColor: cyan,
+    padding: 10
   },
   cardDetail: {	
+    flex: 1,
     borderRadius: 5,
     backgroundColor: white,
-    margin: 20
+    marginHorizontal: 10,
+    marginTop: 10
   },
   cardContainer: {
     flexDirection: 'row',
