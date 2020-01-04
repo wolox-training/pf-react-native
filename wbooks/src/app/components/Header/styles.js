@@ -13,10 +13,6 @@ export default StyleSheet.create({
     position: 'absolute',
     width: '100%'
   },
-  imageButton: {
-    width: imageButtonSize,
-    height: imageButtonSize
-  },
   actionContainer: {
     marginHorizontal: 12,
     flexDirection: 'row',
