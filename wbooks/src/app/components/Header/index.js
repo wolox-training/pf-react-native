@@ -9,6 +9,7 @@ import {
 import backgroundImage from '../../../assets/bc_nav_bar.png';
 import backImage from '../../../assets/ic_back.png';
 import searchImage from '../../../assets/ic_search.png';
+import BackButton from './components/BackButton';
 import styles from './styles';
 
 class CustomHeader extends Component {
@@ -20,11 +21,7 @@ class CustomHeader extends Component {
 					resizeMode="stretch"
 				/>
 				<View style={styles.actionContainer}>
-					<TouchableOpacity>
-						<Image style={styles.imageButton}
-							source={backImage}
-						/>
-					</TouchableOpacity>
+					<BackButton/>
 					<Text style={styles.text}>BOOK DETAIL</Text>
 					<TouchableOpacity>
 						<Image style={styles.imageButton}
