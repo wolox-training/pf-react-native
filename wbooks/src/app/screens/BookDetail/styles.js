@@ -9,7 +9,6 @@ export default StyleSheet.create({
     padding: 10
   },
   cardDetail: {	
-    flex: 1,
     borderRadius: 5,
     backgroundColor: white,
     marginHorizontal: 10,
@@ -73,7 +72,7 @@ export default StyleSheet.create({
     borderWidth: 1,
     marginHorizontal: 30,
     marginTop: 10,
-    marginBottom: 22,
+    marginBottom: 22
   }
 
 });

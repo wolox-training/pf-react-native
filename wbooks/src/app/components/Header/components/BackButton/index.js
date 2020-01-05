@@ -3,14 +3,16 @@ import {
 	Image,
 	TouchableOpacity
 } from 'react-native';
+import { withNavigation } from 'react-navigation';
 
 import styles from './styles';
 import searchImage from '../../../../../assets/ic_back.png';
 
 class BackButton extends Component {
+  handleGoBack = () => this.props.navigation.goBack(null);
 	render() {
 		return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={this.handleGoBack}>
         <Image style={styles.imageButton}
           source={searchImage}
         />
@@ -19,4 +21,4 @@ class BackButton extends Component {
 	}
 }
 
-export default BackButton;
+export default withNavigation(BackButton);
