@@ -8,7 +8,7 @@ import styles from './styles';
 class SearchButton extends Component {
 	render() {
 		return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => {}}>
         <Image style={styles.imageButton}
           source={searchImage}
         />

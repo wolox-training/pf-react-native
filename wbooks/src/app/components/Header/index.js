@@ -9,22 +9,18 @@ import BackButton from './components/BackButton';
 import SearchButton from './components/SearchButton';
 import styles from './styles';
 
-class CustomHeader extends Component {
-	render() {
-		return (
-			<View style={styles.container}>
-				<Image style={styles.image}
-					source={backgroundImage}
-					resizeMode="stretch"
-				/>
-				<View style={styles.actionContainer}>
-					<BackButton/>
-					<Text style={styles.text}>BOOK DETAIL</Text>
-					<SearchButton/>
-				</View>
-			</View>
-		);
-	}
-}
+const CustomHeader = () => (
+	<View style={styles.container}>
+		<Image style={styles.image}
+			source={backgroundImage}
+			resizeMode="stretch"
+		/>
+		<View style={styles.actionContainer}>
+			<BackButton/>
+			<Text style={styles.text}>BOOK DETAIL</Text>
+			<SearchButton/>
+		</View>
+	</View>
+);
 
 export default CustomHeader;
