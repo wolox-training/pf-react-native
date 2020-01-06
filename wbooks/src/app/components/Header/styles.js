@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+
 import { white, cyan } from '../../../constants/colors';
 
 const imageButtonSize = 20;

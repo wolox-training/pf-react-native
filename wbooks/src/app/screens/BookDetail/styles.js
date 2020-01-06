@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { cyan, lightGray, red, white, lightBlue, lightGreen } from '../../../constants/colors';
+import { cyan, lightGray, white, lightBlue, lightGreen } from '../../../constants/colors';
 
 export default StyleSheet.create({
   container: {
