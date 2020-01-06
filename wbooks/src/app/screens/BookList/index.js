@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
-import { 
-	SafeAreaView, 
-	View, 
-	FlatList,
-	TouchableOpacity
-} from 'react-native';
+import { SafeAreaView, View, FlatList, TouchableOpacity } from 'react-native';
 
 import BookItem from './components/BookItem';
 import styles from './styles';
 import BOOKS from './books';
 
 class BookList extends Component {
-
 	renderItem = ({ item }) => (
 		<TouchableOpacity onPress={
 			() => this.props.navigation.navigate('Details', {
@@ -27,7 +21,6 @@ class BookList extends Component {
 	keyExtractor = item => `${item.id}`;
 	 
 	render() {
-
 		return (
 			<SafeAreaView style={styles.container}>
 				<FlatList

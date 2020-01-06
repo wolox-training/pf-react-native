@@ -5,9 +5,10 @@ import {
   FlatList
 } from 'react-native';
 
+import COMMENTS from '../../comments';
+
 import CommentItem from './component/CommentItem';
 import styles from './styles';
-import COMMENTS from '../../comments';
 
 class CommentTable extends Component {
 

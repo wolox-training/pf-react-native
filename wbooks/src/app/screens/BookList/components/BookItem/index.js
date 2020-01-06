@@ -8,7 +8,6 @@ class BookItem extends Component {
 
   render() {
     const { uri, title, author } = this.props;
-    
     return (
       <View style={styles.container}>
         <Image style={styles.image}

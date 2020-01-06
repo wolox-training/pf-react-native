@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { darkGray, cyan } from '../../../../../../../constants/colors';
+
+import { darkGray } from '../../../../../../../constants/colors';
 
 const userSize = 45;
 
