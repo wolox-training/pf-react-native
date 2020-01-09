@@ -1,26 +1,13 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, { Component } from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  View,
-  Text,
-  StatusBar,
-  Image,
-} from 'react-native';
+import { SafeAreaView, StyleSheet, View, Text, StatusBar, Image } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-import BookListIcon from './src/assets/ic_library_active.png';
-import SettingsIcon from './src/assets/ic_settings_active.png';
+import BookListActiveIcon from './src/assets/ic_library_active.png';
+import BookListIcon from './src/assets/ic_library.png';
+import SettingsActiveIcon from './src/assets/ic_settings_active.png';
+import SettingsIcon from './src/assets/ic_settings.png';
 import BookList from './src/app/screens/BookList';
 import BookDetail from './src/app/screens/BookDetail';
 import CustomHeader from './src/app/components/Header';
@@ -43,14 +30,14 @@ const MainNavigator = createStackNavigator({
         screen: BookList,
         navigationOptions: {
           tabBarLabel: null,
-          tabBarIcon: () => <TabBarIcon imageIcon={BookListIcon} label={'Library'}/>
+          tabBarIcon: ({focused}) => <TabBarIcon activeIcon={BookListActiveIcon} inactiveIcon={BookListIcon} label={'Library'} focused={focused}/>
         } 
       },
       Settings: {
         screen: SettingsScreen,
         navigationOptions: {
           tabBarLabel: null,
-          tabBarIcon: () => <TabBarIcon imageIcon={SettingsIcon} label={'Settings'}/>
+          tabBarIcon: ({focused}) => <TabBarIcon activeIcon={SettingsActiveIcon} inactiveIcon={SettingsIcon} label={'Settings'} focused={focused}/>
         }
       },
     },

@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { lightBlue } from '../../../../../constants/colors';
+import { lightBlue, lightGray } from '../../../../../constants/colors';
 
 export default StyleSheet.create({
     container: {
@@ -10,8 +10,11 @@ export default StyleSheet.create({
         width: 21, 
         height: 21 
     },
+    activeLabel: {
+        color: lightBlue
+    },
     label: {
         fontSize: 10,
-        color: lightBlue
+        color: lightGray
     }
 });
