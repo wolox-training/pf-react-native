@@ -10,18 +10,9 @@ import SettingsActiveIcon from './src/assets/ic_settings_active.png';
 import SettingsIcon from './src/assets/ic_settings.png';
 import BookList from './src/app/screens/BookList';
 import BookDetail from './src/app/screens/BookDetail';
+import SettingsScreen from './src/app/screens/Settings';
 import CustomHeader from './src/app/components/Header';
 import TabBarIcon from './src/app/components/TabBar/components/TabBarIcon';
-
-class SettingsScreen extends Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
-      </View>
-    );
-  }
-}
 
 const MainNavigator = createStackNavigator({
   Home: { screen: createBottomTabNavigator(
@@ -43,9 +34,7 @@ const MainNavigator = createStackNavigator({
     },
     {
       tabBarOptions: {
-        showLabel: false,
-        activeTintColor: 'red',
-        inactiveTintColor: 'gray',
+        showLabel: false
       },
     }
   )},
