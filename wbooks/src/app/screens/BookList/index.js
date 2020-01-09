@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { SafeAreaView, View, FlatList, TouchableOpacity } from 'react-native';
+import { SafeAreaView, View, FlatList, TouchableOpacity, Image, Text } from 'react-native';
+
+import icon from '../../../assets/ic_search.png'
 
 import BookItem from './components/BookItem';
 import styles from './styles';
@@ -33,4 +35,4 @@ class BookList extends Component {
 	}
 }
 
-export default BookList;
+export default BookList
