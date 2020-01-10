@@ -4,6 +4,7 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
+import { defaultNavigationOptions, bookListNavigationOptions, settingsNavigationOptions, tabBarOptions } from './src/config/navigationOptions'
 import BookListActiveIcon from './src/assets/ic_library_active.png';
 import BookListIcon from './src/assets/ic_library.png';
 import SettingsActiveIcon from './src/assets/ic_settings_active.png';
@@ -19,23 +20,15 @@ const MainNavigator = createStackNavigator({
     {
       Home: { 
         screen: BookList,
-        navigationOptions: {
-          tabBarLabel: null,
-          tabBarIcon: ({focused}) => <TabBarIcon activeIcon={BookListActiveIcon} inactiveIcon={BookListIcon} label={'Library'} focused={focused}/>
-        } 
+        navigationOptions: bookListNavigationOptions
       },
       Settings: {
         screen: SettingsScreen,
-        navigationOptions: {
-          tabBarLabel: null,
-          tabBarIcon: ({focused}) => <TabBarIcon activeIcon={SettingsActiveIcon} inactiveIcon={SettingsIcon} label={'Settings'} focused={focused}/>
-        }
+        navigationOptions: settingsNavigationOptions
       },
     },
     {
-      tabBarOptions: {
-        showLabel: false
-      },
+      tabBarOptions: tabBarOptions
     }
   )},
   Details: { screen: BookDetail },
@@ -43,10 +36,7 @@ const MainNavigator = createStackNavigator({
 {
   initialRouteName: 'Home',
 
-  defaultNavigationOptions: {
-    header: 
-      <CustomHeader/>
-  },
+  defaultNavigationOptions: defaultNavigationOptions
 });
 
 const App = createAppContainer(MainNavigator);
