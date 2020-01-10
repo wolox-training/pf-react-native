@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Image, TouchableOpacity } from 'react-native';
 import { withNavigation } from 'react-navigation';
 
-import searchImage from '../../../../../assets/ic_back.png';
+import backImage from '../../../../../assets/ic_back.png';
 
 import styles from './styles';
 
@@ -12,7 +12,7 @@ class BackButton extends Component {
 		return (
       <TouchableOpacity onPress={this.handleGoBack}>
         <Image style={styles.imageButton}
-          source={searchImage}
+          source={backImage}
         />
       </TouchableOpacity>
 		);
