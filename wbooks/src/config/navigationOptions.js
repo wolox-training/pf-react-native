@@ -9,6 +9,7 @@ import CustomHeader from '../../src/app/components/Header';
 import TabBarIcon from '../../src/app/components/TabBar/components/TabBarIcon';
 
 export const defaultNavigationOptions = {
+  header: null
 };
 
 export const bookListNavigationOptions = {
