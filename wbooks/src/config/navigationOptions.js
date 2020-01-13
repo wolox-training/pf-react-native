@@ -9,16 +9,17 @@ import CustomHeader from '../../src/app/components/Header';
 import TabBarIcon from '../../src/app/components/TabBar/components/TabBarIcon';
 
 export const defaultNavigationOptions = {
-  header: <CustomHeader/>
 };
 
 export const bookListNavigationOptions = {
+  header: <CustomHeader/>,
   title: 'Library',
   tabBarLabel: null,
   tabBarIcon: ({focused}) => <TabBarIcon activeIcon={BookListActiveIcon} inactiveIcon={BookListIcon} label={'Library'} focused={focused}/>
 };
 
 export const settingsNavigationOptions = {
+  header: <CustomHeader/>,
   title: 'Settings',
   tabBarLabel: null,
   tabBarIcon: ({focused}) => <TabBarIcon activeIcon={SettingsActiveIcon} inactiveIcon={SettingsIcon} label={'Settings'} focused={focused}/>

@@ -14,8 +14,10 @@ import BookDetail from './src/app/screens/BookDetail';
 import SettingsScreen from './src/app/screens/Settings';
 import CustomHeader from './src/app/components/Header';
 import TabBarIcon from './src/app/components/TabBar/components/TabBarIcon';
+import LoginLogout from './src/app/screens/Login';
 
 const MainNavigator = createStackNavigator({
+  Login: { screen: LoginLogout },
   Home: { screen: createBottomTabNavigator(
     {
       Home: { 
@@ -34,7 +36,7 @@ const MainNavigator = createStackNavigator({
   Details: { screen: BookDetail },
 },
 {
-  initialRouteName: 'Home',
+  initialRouteName: 'Login',
 
   defaultNavigationOptions: defaultNavigationOptions
 });
