@@ -13,7 +13,6 @@ import BookList from './src/app/screens/BookList';
 import BookDetail from './src/app/screens/BookDetail';
 import SettingsScreen from './src/app/screens/Settings';
 import CustomHeader from './src/app/components/Header';
-import TabBarIcon from './src/app/components/TabBar/components/TabBarIcon';
 import LoginLogout from './src/app/screens/Login';
 
 const MainNavigator = createStackNavigator({
