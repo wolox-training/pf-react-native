@@ -1,23 +1,13 @@
 import React, { Component }  from 'react';
-import { View, Image } from 'react-native';
 
-import LoginScreen from './layout';
-import backgrounImage from '../../../assets/bc_inicio.png'
-import styles from './styles';
+import Login from './layout';
 
-class LoginLogout extends Component {
+class LoginScreen extends Component {
 	render() {
 		return (
-			<View>
-				<Image 
-					style={styles.background} 
-					source={backgrounImage}
-					resizeMode="stretch"
-				/>
-				<LoginScreen/>
-			</View>
+			<Login/>
 		);
 	}
 }
 
-export default LoginLogout;
+export default LoginScreen;
