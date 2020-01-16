@@ -28,7 +28,7 @@ const MainNavigator = createStackNavigator({
   Details: { screen: BookDetail },
 },
 {
-  initialRouteName: 'Login',
+  initialRouteName: 'Home',
 
   defaultNavigationOptions: defaultNavigationOptions
 });

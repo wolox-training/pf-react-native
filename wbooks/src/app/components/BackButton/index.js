@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Image, TouchableOpacity } from 'react-native';
 import { withNavigation } from 'react-navigation';
 
-import backImage from '../../../../../assets/ic_back.png';
+import backImage from '../../../assets/ic_back.png';
 
 import styles from './styles';
 

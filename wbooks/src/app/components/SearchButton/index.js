@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Image, TouchableOpacity } from 'react-native';
 
-import searchImage from '../../../../../assets/ic_search.png';
+import searchImage from '../../../assets/ic_search.png';
 
 import styles from './styles';
 
