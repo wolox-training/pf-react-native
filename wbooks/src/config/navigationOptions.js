@@ -8,6 +8,7 @@ import headerBackground from '../../src/assets/bc_nav_bar.png';
 import back from '../../src/assets/ic_back.png';
 import SettingsIcon from '../../src/assets/ic_settings.png';
 // import CustomHeader from '../../src/app/components/Header';
+import BackButton from '../../src/app/components/Header/components/BackButton';
 import TabBarIcon from '../../src/app/components/TabBar/components/TabBarIcon';
 import { lightBlue, white } from '../constants/colors';
 import { NAMES } from '../constants/screenNames';
@@ -16,7 +17,7 @@ import { stylesGenericOptions, stylesLibraryHeader } from './styles';
 
 export const navigationOptionsStyle = {
   headerBackground: <Image source={headerBackground} />,
-  headerBackImage: <Image style={stylesGenericOptions.imageBack} source={back} />,
+  headerBackImage: <BackButton/>,
   headerBackTitle: null,
   shadowRadius: 0,
   shadowOffset: {
@@ -44,12 +45,12 @@ export const navigationOptionsTitle = name => ({
   title: NAMES[name]
 });
 
-export const bookListNavigationOptions = {
-  headerShown: false,
+export const bookListNavigationOptions = (name, searchRoute) => ({
+  ...navigationOptionsTitle(name),
   title: 'Library',
   tabBarLabel: null,
   tabBarIcon: ({focused}) => <TabBarIcon activeIcon={BookListActiveIcon} inactiveIcon={BookListIcon} label={'Library'} focused={focused}/>
-};
+});
 
 export const settingsNavigationOptions = {
   headerShown: false,

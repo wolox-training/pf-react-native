@@ -6,11 +6,12 @@ import icon from '../../../assets/ic_search.png'
 import BookItem from './components/BookItem';
 import styles from './styles';
 import BOOKS from './books';
+import { ROUTES } from '../../../constants/routes';
 
 class BookList extends Component {
 	renderItem = ({ item }) => (
 		<TouchableOpacity onPress={
-			() => this.props.navigation.navigate('Details', {
+			() => this.props.navigation.navigate(ROUTES.BookDetail, {
 			book: item
 		})}>
 			<BookItem 

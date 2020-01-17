@@ -1,5 +1,5 @@
 export const NAMES = {
-  Library: 'LIBRARY',
+  BookList: 'BOOK LIST',
   BookDetail: 'BOOK DETAIL',
   Wishlist: 'WISHLIST',
   Addnew: 'ADD NEW',
