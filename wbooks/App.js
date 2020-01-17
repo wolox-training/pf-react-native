@@ -8,6 +8,10 @@ import BookDetail from './src/app/screens/BookDetail';
 import SettingsScreen from './src/app/screens/Settings';
 import LoginScreen from './src/app/screens/Login';
 
+if(__DEV__) {
+  import('./ReactotronConfig').then(() => console.log('Reactotron Configured'))
+}
+
 const MainNavigator = createStackNavigator({
   Login: { screen: LoginScreen },
   Home: { screen: createBottomTabNavigator(
@@ -36,3 +40,14 @@ const MainNavigator = createStackNavigator({
 const App = createAppContainer(MainNavigator);
 
 export default App;
+// import App from './src/app';
+
+// if(__DEV__) {
+//   import('./ReactotronConfig').then(() => console.log('Reactotron Configured'))
+// }
+
+// export default function index() {
+//   return (
+//     <App />
+//   );
+// }
