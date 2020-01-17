@@ -1,5 +1,5 @@
 export const ROUTES = {
-  Library: 'Library',
+  BookList: 'BookList',
   BookDetail: 'BookDetail',
   Wishlist: 'Wishlist',
   Addnew: 'Addnew',
