@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 import { getActiveChildNavigationOptions } from 'react-navigation';
 
 import SearchButton from '../app/components/SearchButton';
@@ -8,18 +8,17 @@ import NotificationsButton from '../app/components/NotificationsButton';
 import BookListActiveIcon from '../../src/assets/ic_library_active.png';
 import BookListIcon from '../../src/assets/ic_library.png';
 import SettingsActiveIcon from '../../src/assets/ic_settings_active.png';
-import headerBackground from '../../src/assets/bc_nav_bar.png';
-import back from '../../src/assets/ic_back.png';
 import SettingsIcon from '../../src/assets/ic_settings.png';
-// import CustomHeader from '../../src/app/components/Header';
 import TabBarIcon from '../../src/app/components/TabBar/components/TabBarIcon';
-import { lightBlue, white } from '../constants/colors';
 import { NAMES } from '../constants/screenNames';
+import BackgroundImage from '../app/components/BackgroundImage/index';
+
 import styles from './styles';
 
 export const defaultNavigationOptions = {
   headerStyle: styles.header,
-  headerBackground: () => <Image style={styles.background} source={headerBackground}/>,
+  headerTransparent: false,
+  headerBackground: () => <BackgroundImage/>,
   headerTitleStyle: styles.headerTitle,
   headerTitleAlign: 'center',
   headerRight: () => <SearchButton/>

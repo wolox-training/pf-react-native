@@ -5,7 +5,7 @@ import logo from '../../../assets/Group.png'
 
 import styles from './styles';
 
-const Login = () => (
+const Login = ({handler}) => (
   <View>
     <Image 
       style={styles.background} 
@@ -15,7 +15,7 @@ const Login = () => (
     <View style={styles.container}>
       <View style={styles.components}>
         <Image style={styles.image} source={logo}/>
-          <TouchableOpacity onPress={() => {}} style={styles.loginButton}>
+          <TouchableOpacity onPress={handler} style={styles.loginButton}>
             <Text style={styles.loginButtonText}>INGRESAR CON GOOGLE</Text>
           </TouchableOpacity>
       </View>
