@@ -2,7 +2,7 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 
-import { defaultNavigationOptions, bookListNavigationOptions, settingsNavigationOptions, tabBarOptions } from './src/config/navigationOptions'
+import { defaultNavigationOptions, bookListNavigationOptions, settingsNavigationOptions, tabBarOptions, bookDetailNavigationOptions, childTabsNavigationOptions } from './src/config/navigationOptions'
 import BookList from './src/app/screens/BookList';
 import BookDetail from './src/app/screens/BookDetail';
 import SettingsScreen from './src/app/screens/Settings';
@@ -19,7 +19,7 @@ const MainNavigator = createStackNavigator({
     {
       [ROUTES.BookList]: { 
         screen: BookList,
-        navigationOptions: bookListNavigationOptions(ROUTES.Library, ROUTES.Search)
+        navigationOptions: bookListNavigationOptions
       },
       [ROUTES.Settings]: {
         screen: SettingsScreen,
@@ -27,10 +27,14 @@ const MainNavigator = createStackNavigator({
       },
     },
     {
-      tabBarOptions: tabBarOptions
-    }
+      tabBarOptions: tabBarOptions,
+      navigationOptions: childTabsNavigationOptions
+    },
   )},
-  [ROUTES.BookDetail]: { screen: BookDetail },
+  [ROUTES.BookDetail]: { 
+    screen: BookDetail,
+    navigationOptions: bookDetailNavigationOptions
+  },
 },
 {
   initialRouteName: ROUTES.BookList,

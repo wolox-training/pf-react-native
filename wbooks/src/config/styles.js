@@ -1,20 +1,18 @@
 import { StyleSheet } from 'react-native';
 
-const ICON_SIZE = 21;
+import { white } from '../constants/colors';
 
-export const stylesGenericOptions = StyleSheet.create({
-  imageBack: {
-    height: ICON_SIZE,
-    width: ICON_SIZE,
-    marginLeft: 15
-  }
-});
-
-export const stylesLibraryHeader = StyleSheet.create({
-  bellIcon: {
-    marginLeft: 15
+export default StyleSheet.create({
+  header: {
+    height: 102, 
+    backgroundColor: 'transparent'
   },
-  searchIcon: {
-    marginRight: 15
+  background: {
+    width: '100%'
+  },
+  headerTitle: {
+    color: white, 
+    fontSize: 19, 
+    fontWeight: 'bold'
   }
 });

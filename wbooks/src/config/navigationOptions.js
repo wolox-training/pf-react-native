@@ -1,6 +1,10 @@
 import React from 'react';
 import { Image } from 'react-native';
+import { getActiveChildNavigationOptions } from 'react-navigation';
 
+import SearchButton from '../app/components/SearchButton';
+import BackButton from '../app/components/BackButton';
+import NotificationsButton from '../app/components/NotificationsButton';
 import BookListActiveIcon from '../../src/assets/ic_library_active.png';
 import BookListIcon from '../../src/assets/ic_library.png';
 import SettingsActiveIcon from '../../src/assets/ic_settings_active.png';
@@ -8,55 +12,46 @@ import headerBackground from '../../src/assets/bc_nav_bar.png';
 import back from '../../src/assets/ic_back.png';
 import SettingsIcon from '../../src/assets/ic_settings.png';
 // import CustomHeader from '../../src/app/components/Header';
-import BackButton from '../../src/app/components/Header/components/BackButton';
 import TabBarIcon from '../../src/app/components/TabBar/components/TabBarIcon';
 import { lightBlue, white } from '../constants/colors';
 import { NAMES } from '../constants/screenNames';
-
-import { stylesGenericOptions, stylesLibraryHeader } from './styles';
-
-export const navigationOptionsStyle = {
-  headerBackground: <Image source={headerBackground} />,
-  headerBackImage: <BackButton/>,
-  headerBackTitle: null,
-  shadowRadius: 0,
-  shadowOffset: {
-    height: 0
-  },
-  headerStyle: {
-    borderBottomWidth: 0,
-    backgroundColor: lightBlue,
-    marginBottom: 50
-  },
-  headerTitleStyle: {
-    color: white,
-    fontWeight: 'bold',
-    fontSize: 17
-  },
-  headerForceInset: { top: 'never' }
-};
+import styles from './styles';
 
 export const defaultNavigationOptions = {
-  defaultNavigationOptions: navigationOptionsStyle,
-  headerLayoutPreset: 'center'
+  headerStyle: styles.header,
+  headerBackground: () => <Image style={styles.background} source={headerBackground}/>,
+  headerTitleStyle: styles.headerTitle,
+  headerTitleAlign: 'center',
+  headerRight: () => <SearchButton/>
 };
 
-export const navigationOptionsTitle = name => ({
-  title: NAMES[name]
-});
-
-export const bookListNavigationOptions = (name, searchRoute) => ({
-  ...navigationOptionsTitle(name),
-  title: 'Library',
+export const bookListNavigationOptions = {
+  headerLeft: () => <NotificationsButton/>,
+  title: NAMES.BookList,
   tabBarLabel: null,
   tabBarIcon: ({focused}) => <TabBarIcon activeIcon={BookListActiveIcon} inactiveIcon={BookListIcon} label={'Library'} focused={focused}/>
-});
+};
+
+export const bookDetailNavigationOptions = {
+  headerLeft: () => <BackButton/>,
+  title: NAMES.BookDetail,
+  tabBarLabel: null,
+  tabBarIcon: ({focused}) => <TabBarIcon activeIcon={BookListActiveIcon} inactiveIcon={BookListIcon} label={'Library'} focused={focused}/>
+};
 
 export const settingsNavigationOptions = {
-  headerShown: false,
-  title: 'Settings',
+  headerLeft: () => <BackButton/>,
+  title: NAMES.Settings,
   tabBarLabel: null,
   tabBarIcon: ({focused}) => <TabBarIcon activeIcon={SettingsActiveIcon} inactiveIcon={SettingsIcon} label={'Settings'} focused={focused}/>
+};
+
+export const childTabsNavigationOptions = ({ navigation, screenProps }) =>
+ getActiveChildNavigationOptions(navigation, screenProps);
+
+export const noHeaderNavigationOptions = {
+    headerMode: 'none',
+    headerShown: false
 };
 
 export const tabBarOptions = {

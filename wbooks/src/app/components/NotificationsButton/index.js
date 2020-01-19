@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Image, TouchableOpacity } from 'react-native';
 import { withNavigation } from 'react-navigation';
 
-import backImage from '../../../../../assets/ic_back.png';
+import backImage from '../../../assets/ic_notifications.png';
 
 import styles from './styles';
 
-class BackButton extends Component {
-  handleGoBack = () => this.props.navigation.goBack(null);
+class NotificationsButton extends Component {
+  handleGoBack = () => {};
 	render() {
 		return (
       <TouchableOpacity onPress={this.handleGoBack}>
@@ -19,4 +19,4 @@ class BackButton extends Component {
 	}
 }
 
-export default withNavigation(BackButton);
+export default withNavigation(NotificationsButton);
