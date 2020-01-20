@@ -8,8 +8,6 @@ if(__DEV__) {
 
 export default function index() {
   return (
-    <Fragment>
-      <MyApp />
-    </Fragment>
+    <MyApp />
   );
 }
