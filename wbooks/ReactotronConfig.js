@@ -8,3 +8,5 @@ const reactotron = Reactotron.configure()
   .use(asyncStorage())
   .use(tronsauce())
   .connect();
+
+  export default reactotron;

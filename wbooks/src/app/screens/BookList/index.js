@@ -29,8 +29,6 @@ class BookList extends Component {
 					data={BOOKS}
 					renderItem={this.renderItem}
 					keyExtractor={this.keyExtractor}
-					ListHeaderComponent={this.renderHeader}
-					stickyHeaderIndices={[0]}
 				/>
 			</SafeAreaView>
 		);

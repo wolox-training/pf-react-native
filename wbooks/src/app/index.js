@@ -1,47 +1,83 @@
-import { createAppContainer } from 'react-navigation';
+import React from 'react';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
-// import { Provider } from 'react-redux';
+import { Provider, connect } from 'react-redux';
+import { createReduxContainer, createReactNavigationReduxMiddleware, createNavigationReducer } from 'react-navigation-redux-helpers';
 
-import { defaultNavigationOptions, bookListNavigationOptions, settingsNavigationOptions, tabBarOptions } from '../config/navigationOptions'
-import BookList from './screens/BookList';
-import BookDetail from './screens/BookDetail';
-import SettingsScreen from './screens/Settings';
-import LoginScreen from './screens/Login';
+import * as NavigationOptions from '../../src/config/navigationOptions'
+import BookList from '../../src/app/screens/BookList';
+import BookDetail from '../../src/app/screens/BookDetail';
+import SettingsScreen from '../../src/app/screens/Settings';
+import LoginScreen from '../../src/app/screens/Login';
+import { ROUTES } from '../../src/constants/routes';
+import configureStore from '../redux/store';
 
-const MainNavigator = createStackNavigator({
-  Login: { screen: LoginScreen },
-  Home: { screen: createBottomTabNavigator(
-    {
-      Home: { 
-        screen: BookList,
-        navigationOptions: bookListNavigationOptions
-      },
-      Settings: {
-        screen: SettingsScreen,
-        navigationOptions: settingsNavigationOptions
-      },
+const BooksNavigator = createStackNavigator(
+  {
+    [ROUTES.BookList]: { 
+      screen: BookList,
+      navigationOptions: NavigationOptions.bookListNavigationOptions
     },
-    {
-      tabBarOptions: tabBarOptions
+    [ROUTES.BookDetail]: { 
+      screen: BookDetail,
+      navigationOptions: NavigationOptions.bookDetailNavigationOptions
     }
-  )},
-  Details: { screen: BookDetail },
-},
-{
-  initialRouteName: 'Home',
+  },
+  {
+    defaultNavigationOptions: NavigationOptions.defaultNavigationOptions
+  }
+);
 
-  defaultNavigationOptions: defaultNavigationOptions
+const TabNavigator = createBottomTabNavigator(
+  {
+    [ROUTES.BookList]: {
+      screen: BooksNavigator,
+      navigationOptions: NavigationOptions.bookListNavigationOptions
+    },
+    [ROUTES.Settings]: {
+      screen: SettingsScreen,
+      navigationOptions: NavigationOptions.settingsNavigationOptions
+    }
+  },
+  {
+    tabBarOptions: NavigationOptions.tabBarOptions,
+    navigationOptions: NavigationOptions.childTabsNavigationOptions
+  }
+);
+
+const SwitchNavigator = createSwitchNavigator(
+  {
+    [ROUTES.App]: TabNavigator,
+    [ROUTES.Login]: { 
+      screen: LoginScreen,
+      navigationOptions: NavigationOptions.noHeaderNavigationOptions
+    }
+  },
+  {
+    initialRouteName: ROUTES.App
+  }
+)
+
+const AppNavigator = createAppContainer(SwitchNavigator);
+
+const navReducer = createNavigationReducer(AppNavigator);
+
+const middlewareNav = createReactNavigationReduxMiddleware(state => state.nav);
+
+const App = createReduxContainer(SwitchNavigator);
+const mapStateToProps = state => ({
+  state: state.nav
 });
+const AppWithNavigationState = connect(mapStateToProps)(AppNavigator);
 
-const appContainer = createAppContainer(MainNavigator);
-
-function App() {
+const store = configureStore({}, navReducer, middlewareNav);
+function MyApp() {
   return (
-    // <Provider store={store}>
-      <appContainer />
-    // </Provider>
+    <Provider store={store}>
+      <AppWithNavigationState />
+    </Provider>
   );
 }
 
-export default App;
+export default MyApp;

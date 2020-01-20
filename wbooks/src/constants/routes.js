@@ -3,4 +3,5 @@ export const ROUTES = {
   BookDetail: 'BookDetail',
   Settings: 'Settings',
   Login: 'Login',
+  App: 'App'
 };

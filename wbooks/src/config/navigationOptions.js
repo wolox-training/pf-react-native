@@ -33,9 +33,7 @@ export const bookListNavigationOptions = {
 
 export const bookDetailNavigationOptions = {
   headerLeft: () => <BackButton/>,
-  title: NAMES.BookDetail,
-  tabBarLabel: null,
-  tabBarIcon: ({focused}) => <TabBarIcon activeIcon={BookListActiveIcon} inactiveIcon={BookListIcon} label={'Library'} focused={focused}/>
+  title: NAMES.BookDetail
 };
 
 export const settingsNavigationOptions = {
